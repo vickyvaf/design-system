@@ -1,0 +1,23 @@
+/** @type { import('@storybook/react').Preview } */
+import { Preview } from '@storybook/react';
+import { themes } from '@storybook/theming';
+
+const preview:Preview = {
+  parameters: {
+    actions: { argTypesRegex: "^on[A-Z].*" },
+    controls: {
+      matchers: {
+        color: /(background|color)$/i,
+        date: /Date$/i,
+      },
+    },
+    docs: {
+      logo: {
+        src: 'path/to/your/logo.png',
+      },
+      themes: themes.dark
+    },  
+  },
+};
+
+export default preview;
