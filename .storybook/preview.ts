@@ -1,8 +1,8 @@
 /** @type { import('@storybook/react').Preview } */
-import { Preview } from '@storybook/react';
-import { themes } from '@storybook/theming';
+import { Preview } from "@storybook/react";
+import { themes } from "@storybook/theming";
 
-const preview:Preview = {
+const preview: Preview = {
   parameters: {
     actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
@@ -13,10 +13,10 @@ const preview:Preview = {
     },
     docs: {
       logo: {
-        src: 'path/to/your/logo.png',
+        src: "./public/logo.svg",
       },
-      themes: themes.dark
-    },  
+      themes: themes.dark,
+    },
   },
 };
 

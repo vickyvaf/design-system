@@ -8,13 +8,16 @@
     "lint": "eslint . --ext .ts,.tsx --ignore-path .gitignore --fix",
     "dev:storybook": "storybook dev -p 6006",
     "build:storybook": "storybook build",
-    "serve:storybook": "serve storybook-static"
-  },
-  "lint-staged": {
-    "*.{ts,tsx}": [
-      "npm run format",
-      "npm run lint"
-    ]
+    "serve:storybook": "serve storybook-static",
+    "types:check": "tsc --noEmit --pretty",
+    "types:staged": "tsc --noEmit --pretty",
+    "lint:check": "yarn eslint",
+    "lint:fix": "yarn eslint --fix",
+    "lint:staged": "eslint --fix",
+    "prettier": "prettier \"**/*.+(json|ts|tsx|css|md)\"",
+    "format:check": "yarn prettier --check",
+    "format:fix": "yarn prettier --write",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
