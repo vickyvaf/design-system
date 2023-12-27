@@ -1,6 +1,10 @@
+import React from "react";
+
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { Button } from "./Button";
+import { ThemeProvider } from "styled-components";
+import { theme } from "../../tokens/tokens";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
@@ -8,6 +12,13 @@ const meta = {
   component: Button,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
   tags: ["autodocs"],
+  decorators: [
+    (Story) => (
+      <ThemeProvider theme={theme}>
+        <Story />
+      </ThemeProvider>
+    ),
+  ],
 } satisfies Meta<typeof Button>;
 
 export default meta;
@@ -24,13 +35,6 @@ export const Primary: Story = {
 export const Secondary: Story = {
   args: {
     type: "secondary",
-    children: "Button",
-  },
-};
-
-export const Danger: Story = {
-  args: {
-    danger: true,
     children: "Button",
   },
 };
