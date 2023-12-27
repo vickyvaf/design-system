@@ -20,6 +20,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/preset-react": "^7.23.3",
+    "@rollup/plugin-node-resolve": "^15.2.3",
     "@storybook/addon-essentials": "7.6.6",
     "@storybook/addon-interactions": "7.6.6",
     "@storybook/addon-links": "7.6.6",
@@ -37,6 +39,9 @@
     "prop-types": "15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "rollup": "^4.9.1",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
     "storybook": "7.6.6",
     "typescript": "^5.3.3"
   },
@@ -46,5 +51,8 @@
   },
   "resolutions": {
     "jackspeak": "2.1.1"
+  },
+  "dependencies": {
+    "styled-components": "^6.1.3"
   }
 }
