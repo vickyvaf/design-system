@@ -9,7 +9,7 @@
     "dist"
   ],
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/vickyvaf"
+    "@vickyvaf:registry": "https://npm.pkg.github.com"
   },
   "scripts": {
     "dev:storybook": "storybook dev -p 6006",
