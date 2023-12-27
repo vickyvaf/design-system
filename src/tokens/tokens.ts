@@ -32,4 +32,4 @@ export const theme = {
     medium: "6px",
     large: "8px",
   },
-} as const;
+};
