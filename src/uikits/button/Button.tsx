@@ -1,5 +1,6 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
+import { theme } from "../../tokens";
 
 type ButtonProps = {
   type?: "primary" | "secondary";
@@ -27,5 +28,9 @@ const StyledButton = styled.button<ButtonProps>`
 `;
 
 export const Button = (props: ButtonProps) => {
-  return <StyledButton {...props}>{props.children}</StyledButton>;
+  return (
+    <ThemeProvider theme={theme}>
+      <StyledButton {...props}>{props.children}</StyledButton>
+    </ThemeProvider>
+  );
 };
