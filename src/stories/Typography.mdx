@@ -1,0 +1,61 @@
+import { Meta, Typeset } from "@storybook/blocks";
+
+<Meta title="System/Typography" />
+
+export const SampleText = "Lorem ipsum dolor sit amet"
+export const fontFamily = "Sora"
+
+export const typography = {
+  type: {
+    primary: 'Sora',
+  },
+  weight: {
+    thin: '100',
+    extraLight: '200',
+    light: '300',
+    regular: '400',
+    medium: '500',
+    semibold: '600',
+    bold: '700',
+    extrabold: '800',
+    black: '900',
+  },
+  size: {
+    xs1: 6,
+    xs2: 8,
+    xs3: 10,
+    s1: 12,
+    s2: 14,
+    s3: 16,
+    m1: 20,
+    m2: 24,
+    m3: 28,
+    l1: 32,
+    l2: 40,
+    l3: 48,
+  },
+};
+
+# Typography
+
+**Font:** Sora
+
+<Typeset
+  fontSizes={[
+    Number(typography.size.xs1),
+    Number(typography.size.xs2),
+    Number(typography.size.xs3),
+    Number(typography.size.s1),
+    Number(typography.size.s2),
+    Number(typography.size.s3),
+    Number(typography.size.m1),
+    Number(typography.size.m2),
+    Number(typography.size.m3),
+    Number(typography.size.l1),
+    Number(typography.size.l2),
+    Number(typography.size.l3),
+  ]}
+  fontWeight={typography.weight.regular}
+  sampleText={SampleText}
+  fontFamily={typography.type.primary}
+/>
